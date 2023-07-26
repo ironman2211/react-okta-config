@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useOktaAuth } from '@okta/okta-react'
+import { Link } from 'react-router-dom/cjs/react-router-dom';
 
 export default function Header() {
     const [header, setHeader] = useState('')
@@ -33,8 +34,9 @@ export default function Header() {
                     authState.isAuthenticated ?
                         <button id="login-button" type="button" onClick={handleLogout} style={{ padding: '.4rem 1rem', color: "#6dccbf", border: 'none', backgroundColor: "#e9fffc", borderRadius: '.4rem' }}>Logout</button> :
                         <button id="login-button" type="button" onClick={login} style={{ padding: '.4rem 1rem', color: "#6dccbf", border: 'none', backgroundColor: "#e9fffc", borderRadius: '.4rem' }}>Login</button>
-
-                }
+                        
+                    }
+                    <Link to='/login'>ff</Link>
             </div>
         </div>
     )

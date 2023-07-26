@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useOktaAuth } from '@okta/okta-react'
 import { useSelector } from 'react-redux';
 import Header from '../components/Header.js';
@@ -7,8 +7,6 @@ import { selectUser } from '../app/User/UserSlice.js';
 export default function Home() {
     const { authState, oktaAuth } = useOktaAuth();
 
-
-    const [user, setUser] = useState({});
 
     const handleLogout = async () => {
         try {
